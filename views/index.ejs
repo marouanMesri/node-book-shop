@@ -1,0 +1,26 @@
+<%- include('components/header') -%>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Category</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% books.forEach((book)=> { %>
+    <tr>
+      <th scope="row"><%= book.name %></th>
+      <td><%= book.category %></td>
+      <td><%= book.price %> €</td>
+      <td>
+        <button type="button" class="btn btn-primary">Modifier</button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
+      </td>
+    </tr>
+
+    <% }) %>
+  </tbody>
+</table>
+<%- include('components/footer') -%>

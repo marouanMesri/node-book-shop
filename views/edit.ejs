@@ -1,0 +1,44 @@
+<%- include('components/header') -%>
+<div class="container">
+  <h1>Modifier un livre</h1>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="bookname"
+          placeholder="Nom du livre"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Catégorie</label>
+        <input
+          type="text"
+          class="form-control"
+          id="vategory"
+          placeholder="Catégorie du livre"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Prix</label>
+        <input
+          type="number"
+          class="form-control"
+          id="vategory"
+          placeholder="...€"
+        />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Modifier le livre</button>
+  </form>
+</div>
+<%- include('components/footer') -%>

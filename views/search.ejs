@@ -1,0 +1,41 @@
+<%- include('components/header') -%>
+<div class="container">
+  <h1>Rechercher un livre</h1>
+  <form action="/books/searchOne" method="GET">
+    <div class="form-row">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Rechercher un livre"
+        name="name"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-bottom: 6em">
+      Rechercher
+    </button>
+  </form>
+  <br />
+
+  <% if(book) { %>
+  <h3>Résultat</h3>
+
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Category</th>
+        <th scope="col">Prix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><%= book.name %></th>
+        <td><%= book.category %></td>
+        <td><%= book.price %></td>
+      </tr>
+    </tbody>
+  </table>
+  <% } %>
+</div>
+
+<%- include('components/footer') -%>
